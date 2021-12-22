@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
+'''import mongoengine
+
+mongoengine.connect(db=users, host=hostname, username=username, password=pwd)'''    
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -37,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'AppToDoList.apps.ApptodolistConfig',
 ]
 
 MIDDLEWARE = [
@@ -72,6 +77,7 @@ WSGI_APPLICATION = 'ToDoList.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
 
 DATABASES = {
     'default': {
