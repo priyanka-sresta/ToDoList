@@ -1,12 +1,20 @@
+{% extends 'AppToDoList/main.html' %}
+{% block content %}
 <!DOCTYPE html>
 <html>
-    <h3>Task Form</h3>
+    <div class='header-bar'>
+        <a href="{% url 'tasks' %}">&#8592; Back</a>
+    </div>
 
-    <a href='{% url 'tasks' %}'>Go Back</a>
 
-    <form method="POST" action=''>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="submit"/>
-    </form>
+
+    <div class='card-body'>
+        <form method="POST" action=''>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class='button' type="submit" value="submit"/>
+        </form>
+    </div>
+    
 </html>
+{% endblock content %}
